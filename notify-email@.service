@@ -1,0 +1,9 @@
+[Unit]
+Description=Send Systemd Notifications to Email
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bash -c 'echo "Subject: Service Failed\n\nService %i failed on $(hostname)\n$(systemctl status %i)" | /bin/msmtp myemail@domain.com'
+
+[Install]
+WantedBy=multi-user.target
