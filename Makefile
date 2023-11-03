@@ -22,6 +22,7 @@ TIMERS = \
 	restic-check-monthly@.timer
 
 SERVICES = \
+	notify-email@.service \
 	restic-backup@.service \
 	restic-check@.service
 
