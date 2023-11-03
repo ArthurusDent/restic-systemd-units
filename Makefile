@@ -12,9 +12,11 @@ RESTIC_USER=restic
 RESTIC_GROUP=restic
 
 TIMERS = \
+	restic-backup-hourly@.timer \
 	restic-backup-daily@.timer \
 	restic-backup-weekly@.timer \
 	restic-backup-monthly@.timer \
+	restic-check-hourly@.timer \
 	restic-check-daily@.timer \
 	restic-check-weekly@.timer \
 	restic-check-monthly@.timer
